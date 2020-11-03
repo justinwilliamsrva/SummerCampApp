@@ -20,7 +20,15 @@ break;
 
 }
 
+Post.create({title,content,user,slug}, (err,post) => {
 
-res.json({ message:'See your server console'})
+    if(err){
+        console.log(err)
+        res.status(400).json({error: "duplicate post"})
+    }
+  res.json(post);
+} )
+
+
 
 }
