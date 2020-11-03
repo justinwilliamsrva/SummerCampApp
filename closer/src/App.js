@@ -19,6 +19,30 @@ export default function App() {
         fetchPosts();
     }, []);
 
+const deleteConfirm = (slug) =>{
+
+
+  let answer = window.confirm("Are you sure you want to delete this post?")
+
+  if(answer){
+deletePost(slug)
+
+  }
+
+}
+
+  const deletePost = slug =>{
+
+    axios
+    .delete(`${process.env.REACT_APP_API}/post/${slug}`)
+      .then(response => {
+      console.log(response)
+      alert(response.data.message)
+      fetchPosts();
+    })
+    .catch((error) => alert(error
+    ))}
+
     return (
         <div className="container pb-5">
             <Nav />
@@ -46,7 +70,7 @@ export default function App() {
                       <Link to={`/post/update/${post.slug}`} className="btn btn-sm btn-outline-warning mr-1">
                                     Update
                       </Link>
-                      <button className="btn btn-sm btn-outline-danger">Delete</button>
+                      <button onClick={()=> deleteConfirm(post.slug) } className="btn btn-sm btn-outline-danger">Delete</button>
                             </div>
                         </div>
                     </div>
