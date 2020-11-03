@@ -3,12 +3,13 @@ const express = require("express")
 
 const router = express.Router()
 
+
+
+// import controler methods
+const {create} = require('../controllers/post')
+
 // route
-router.get("/", (req, res) => {
-    res.json({
-        data: "You reached node.js api for reach node crud app",
-    });
-});
+router.get("/", create);
 
 
 module.exports = router;
