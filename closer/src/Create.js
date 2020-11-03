@@ -21,7 +21,7 @@ const Create = () => {
         event.preventDefault();
         // console.table({ title, content, user });
         axios
-            .post(`${process.env.REACT_APP_API}/post`, { title, content, user })
+            .post(process.env.REACT_APP_API, { title, content, user })
             .then(response => {
                 console.log(response);
                 // empty state
@@ -30,8 +30,9 @@ const Create = () => {
                 alert(`Post titled ${response.data.title} is created`);
             })
             .catch(error => {
+                console.log(process.env.REACT_APP_API)
                 console.log(error.response);
-                alert(error.response.data.error);
+                alert("error");
             });
     };
 

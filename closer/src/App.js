@@ -1,12 +1,9 @@
+import React from 'react';
 
-
-
-function App() {
-  return (
-    <div className="App">
-      <h1>MERN CRUD</h1>
+const App = () => (
+    <div className="container p-5">
+        <h1>MERN CRUD</h1>
     </div>
-  );
-}
+);
 
 export default App;
