@@ -9,7 +9,7 @@ const router = express.Router()
 const {create} = require('../controllers/post')
 
 // route
-router.get("/", create);
+router.post("/post", create);
 
 
 module.exports = router;
