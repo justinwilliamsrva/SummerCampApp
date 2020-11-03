@@ -4,12 +4,15 @@ import App from './App';
 import Create from './Create';
 import SinglePost from './SinglePost';
 import UpdatePost from './UpdatePost';
+import Login from './Login';
+
 
 const Routes = () => {
     return (
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={App} />
+                <Route exact path="/login" component={Login} />
                 <Route exact path="/create" component={Create} />
                 <Route exact path="/post/:slug" component={SinglePost} />
                 <Route exact path="/post/update/:slug" component={UpdatePost}/>
