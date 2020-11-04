@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import Nav from "./Nav"
+import { authenticate } from "./helpers"
 
 
-export default function Login() {
+
+const Login = (props) => {
 
     // create a state
     const [state, setState] = useState({
@@ -28,6 +30,7 @@ export default function Login() {
             .then(response => {
                 console.log(response);
                 // response will contain token
+                authenticate(response,()=> props.history.push('/create'))
                 // redirect to
             })
             .catch(error => {
@@ -73,3 +76,4 @@ export default function Login() {
             </form>
             </div>
     )}
+export default withRouter(Login);
