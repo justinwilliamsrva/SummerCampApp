@@ -44,7 +44,7 @@ export const logout= (next) => {
     if (window !== "undefined") {
 
         sessionStorage.removeItem("token")
-        sessionStorage.setItem("user")
+        sessionStorage.removeItem("user")
 
 }
     next();
