@@ -23,20 +23,18 @@ export default function Login() {
     const handleSubmit = event => {
         event.preventDefault();
         console.table({ name, password });
-        // axios
-        //     .post(`${process.env.REACT_APP_API}/post`, { title, content, user })
-        //     .then(response => {
-        //         console.log(response);
-        //         // empty state
-        //         setState({ ...state, title: '', content: '', user: '' });
-        //         // show sucess alert
-        //         alert(`Post titled ${response.data.title} is created`);
-        //     })
-        //     .catch(error => {
-        //         console.log(process.env.REACT_APP_API)
-        //         console.log(error.response);
-        //         alert("error");
-        //     });
+        axios
+            .post(`${process.env.REACT_APP_API}/login`, { name,password })
+            .then(response => {
+                console.log(response);
+                // response will contain token
+                // redirect to
+            })
+            .catch(error => {
+                console.log(process.env.REACT_APP_API)
+                console.log(error.response);
+                alert(error.response.data.error);
+            });
     };
 
     return (

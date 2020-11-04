@@ -46,7 +46,7 @@ deletePost(slug)
     return (
         <div className="container pb-5">
             <Nav />
-            <h1>MERN CRUD</h1>
+            <h1>All Posts</h1>
             <br />
             {posts.map((post, i) => (
                 <div className="row" key={post._id}>
