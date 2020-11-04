@@ -1,36 +1,42 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import Nav from "./Nav"
+import React, { useState } from "react";
+import axios from "axios";
+import Nav from "./Nav";
+import { getUser, getToken } from "./helpers";
+
 const Create = () => {
     // state
     const [state, setState] = useState({
-        title: '',
-        content: '',
-        user: ''
+        title: "",
+        content: "",
+        user: "",
     });
     // destructure values from state
     const { title, content, user } = state;
 
     // onchange event handler
-    const handleChange = name => event => {
+    const handleChange = (name) => (event) => {
         // console.log('name', name, 'event', event.target.value);
         setState({ ...state, [name]: event.target.value });
     };
 
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         // console.table({ title, content, user });
         axios
-            .post(`${process.env.REACT_APP_API}/post`, { title, content, user })
-            .then(response => {
+            .post(
+                `${process.env.REACT_APP_API}/post`,
+                { title, content, user },
+                { headers: { authorization: `Bearer ${getToken()}` } }
+            )
+            .then((response) => {
                 console.log(response);
                 // empty state
-                setState({ ...state, title: '', content: '', user: '' });
+                setState({ ...state, title: "", content: "", user: "" });
                 // show sucess alert
                 alert(`Post titled ${response.data.title} is created`);
             })
-            .catch(error => {
-                console.log(process.env.REACT_APP_API)
+            .catch((error) => {
+                console.log(process.env.REACT_APP_API);
                 console.log(error.response);
                 alert("error");
             });
@@ -38,7 +44,7 @@ const Create = () => {
 
     return (
         <div className="container pb-5">
-            <Nav/>
+            <Nav />
             <h1>CREATE POST</h1>
             <br />
 
@@ -46,7 +52,7 @@ const Create = () => {
                 <div className="form-group">
                     <label className="text-muted">Title</label>
                     <input
-                        onChange={handleChange('title')}
+                        onChange={handleChange("title")}
                         value={title}
                         type="text"
                         className="form-control"
@@ -57,7 +63,7 @@ const Create = () => {
                 <div className="form-group">
                     <label className="text-muted">Content</label>
                     <textarea
-                        onChange={handleChange('content')}
+                        onChange={handleChange("content")}
                         value={content}
                         type="text"
                         className="form-control"
@@ -68,7 +74,7 @@ const Create = () => {
                 <div className="form-group">
                     <label className="text-muted">User</label>
                     <input
-                        onChange={handleChange('user')}
+                        onChange={handleChange("user")}
                         value={user}
                         type="text"
                         className="form-control"

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import { getUser, getToken } from "./helpers";
 export default function App() {
     const [posts, setPosts] = useState([]);
 
@@ -19,29 +19,26 @@ export default function App() {
         fetchPosts();
     }, []);
 
-const deleteConfirm = (slug) =>{
+    const deleteConfirm = (slug) => {
+        let answer = window.confirm("Are you sure you want to delete this post?");
 
+        if (answer) {
+            deletePost(slug);
+        }
+    };
 
-  let answer = window.confirm("Are you sure you want to delete this post?")
-
-  if(answer){
-deletePost(slug)
-
-  }
-
-}
-
-  const deletePost = slug =>{
-
-    axios
-    .delete(`${process.env.REACT_APP_API}/post/${slug}`)
-      .then(response => {
-      console.log(response)
-      alert(response.data.message)
-      fetchPosts();
-    })
-    .catch((error) => alert(error
-    ))}
+    const deletePost = (slug) => {
+        axios
+            .delete(`${process.env.REACT_APP_API}/post/${slug}`, {
+                headers: { authorization: `Bearer ${getToken()}` },
+            })
+            .then((response) => {
+                console.log(response);
+                alert(response.data.message);
+                fetchPosts();
+            })
+            .catch((error) => alert(error));
+    };
 
     return (
         <div className="container pb-5">
@@ -65,13 +62,20 @@ deletePost(slug)
                                     </span>
                                 </p>
                             </div>
-
-                            <div className="col-md-2">
-                      <Link to={`/post/update/${post.slug}`} className="btn btn-sm btn-outline-warning mr-1">
-                                    Update
-                      </Link>
-                      <button onClick={()=> deleteConfirm(post.slug) } className="btn btn-sm btn-outline-danger">Delete</button>
-                            </div>
+                            {getUser() && (
+                                <div className="col-md-2">
+                                    <Link
+                                        to={`/post/update/${post.slug}`}
+                                        className="btn btn-sm btn-outline-warning mr-1">
+                                        Update
+                                    </Link>
+                                    <button
+                                        onClick={() => deleteConfirm(post.slug)}
+                                        className="btn btn-sm btn-outline-danger">
+                                        Delete
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
