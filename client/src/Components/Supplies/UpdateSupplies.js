@@ -28,7 +28,7 @@ export default function UpdatePost(props) {
         // console.log('name', name, 'event', event.target.value);
         setState({ ...state, [name]: event.target.value });
     };
-
+    let history = useHistory();
     const handleSubmit = (event) => {
         event.preventDefault();
         // console.table({ title, content, user });
@@ -47,7 +47,8 @@ export default function UpdatePost(props) {
 
                 setState({ ...state, item, location, slug, user, availability, notes });
                 // show sucess alert
-                alert(`The item'${item}' is updated`);
+                alert(`The item '${item}' is updated`);
+                history.push("/equiptment");
             })
             .catch((error) => {
                 console.log(error.response);
@@ -61,7 +62,7 @@ export default function UpdatePost(props) {
             deletePost(slug);
         }
     };
-    let history = useHistory();
+
 
     const deletePost = (slug) => {
 
