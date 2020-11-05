@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
-
+import { useHistory } from "react-router-dom";
 const Create = () => {
     // state
     const [state, setState] = useState({
@@ -19,6 +19,8 @@ const Create = () => {
         setState({ ...state, [name]: event.target.value });
     };
 
+    let history = useHistory();
+
     const handleSubmit = (event) => {
         event.preventDefault();
         // console.table({ title, content, user });
@@ -34,6 +36,11 @@ const Create = () => {
                 setState({ ...state, title: "", content: "", user: "" });
                 // show sucess alert
                 alert(`Post titled ${response.data.title} is created`);
+                let page = window.confirm("Would like like to make another announcement");
+                if (page == true) {
+                    history.push("/create");
+                }
+                else { history.push("/"); }
             })
             .catch((error) => {
                 console.log(process.env.REACT_APP_API);
@@ -56,7 +63,6 @@ const Create = () => {
                         value={title}
                         type="text"
                         className="form-control"
-
                         required
                     />
                 </div>
@@ -67,7 +73,6 @@ const Create = () => {
                         value={content}
                         type="text"
                         className="form-control"
-
                         required
                     />
                 </div>
