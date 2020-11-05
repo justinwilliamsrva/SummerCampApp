@@ -8,20 +8,32 @@ require("dotenv").config();
 // import routes
 const postRoutes = require("./routes/post")
 const authRoutes = require("./routes/auth")
+const equiptRoutes = require("./routes/equipt")
 // app
 const app = express();
 
 // db
 mongoose
-    .connect(process.env.DATABASE, {
+    .connect(process.env.MESSAGE_DATABASE, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
         useFindAndModify: false,
 
     })
-    .then(() => console.log("DB connected"))
+    .then(() => console.log("Message DB connected"))
     .catch((err) => console.log(err));
+
+    // mongoose
+    // .connect(process.env.EQUIPT_DATABASE, {
+    //     useNewUrlParser: true,
+    //     useUnifiedTopology: true,
+    //     useCreateIndex: true,
+    //     useFindAndModify: false,
+
+    // })
+    // .then(() => console.log("Equiptment DB connected"))
+    // .catch((err) => console.log(err));
 
 // middlewares
 app.use(cors());
@@ -32,6 +44,7 @@ app.use(bodyParser.json());
 
 app.use("/api", postRoutes)
 app.use("/api", authRoutes)
+app.use("/api", equiptRoutes)
 
 // port
 const port = process.env.PORT || 8000;
