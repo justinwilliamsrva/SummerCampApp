@@ -38,7 +38,16 @@ exports.list = (req, res) => {
             res.json(equipts);
         });
 };
-
+exports.read = (req, res) => {
+    const { slug } = req.params;
+    Equipt.findOne({ slug })
+        // .limit(10)
+        // .sort({ createdAt: -1 })
+        .exec((err, equipt) => {
+            if (err) console.log(err);
+            res.json(equipt);
+        });
+};
 
 exports.update = (req, res) => {
     const { slug } = req.params;
