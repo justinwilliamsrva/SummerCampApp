@@ -51,7 +51,7 @@ export default function Supplies() {
                 </Link>
             )}
             <br />
-            <table class="table table-striped">
+            <table class="table table-striped mt-1">
                 <thead>
                     <tr>
                         <th scope="col">Item</th>
