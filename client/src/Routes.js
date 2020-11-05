@@ -6,6 +6,7 @@ import Create from './Components/Messages/Create';
 import UpdatePost from './Components/Messages/UpdatePost';
 import Login from './Login';
 import PrivateRoute from "./PrivateRoute"
+import Supplies from "./Components/Supplies/Supplies"
 
 
 const Routes = () => {
@@ -16,6 +17,7 @@ const Routes = () => {
                 <Route exact path="/login" component={Login} />
                 <PrivateRoute exact path="/create" component={Create} />
                 {/* <Route exact path="/post/:slug" component={SinglePost} /> */}
+                <Route exact path="/equiptment" component={Supplies} />
                 <PrivateRoute exact path="/post/update/:slug" component={UpdatePost}/>
             </Switch>
         </BrowserRouter>
