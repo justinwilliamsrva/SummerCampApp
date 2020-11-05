@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
-
+import { useHistory } from "react-router-dom";
 export default function UpdatePost(props) {
     const [state, setState] = useState({
         item: "",
@@ -12,7 +12,7 @@ export default function UpdatePost(props) {
         availability: "",
         notes: "",
     });
-
+    let history = useHistory();
     const { item, location, slug, user, availability, notes } = state;
     useEffect(() => {
         axios
@@ -54,6 +54,29 @@ export default function UpdatePost(props) {
                 alert("error");
             });
     };
+    const deleteConfirm = (slug) => {
+        let answer = window.confirm("Are you sure you want to delete this item?");
+
+        if (answer) {
+            deletePost(slug);
+        }
+    };
+
+    const deletePost = (slug) => {
+
+        axios
+            .delete(`${process.env.REACT_APP_EQUIPT_API}/equiptment/${slug}`, {
+                headers: { authorization: `Bearer ${getToken()}` },
+            })
+            .then((response) => {
+                console.log(response);
+                alert(response.data.message);
+                history.push("/equiptment");
+
+            })
+            .catch((error) => alert(error));
+    };
+
 
     const showUpdateForm = () => (
         <form onSubmit={handleSubmit}>
@@ -67,7 +90,8 @@ export default function UpdatePost(props) {
                     required
                 />
             </div>
-            {/* <label className="text-muted">Availability</label>
+
+            <label className="text-muted">Availability</label>
             <div class="custom-control custom-radio">
                 <input
                     type="radio"
@@ -89,7 +113,8 @@ export default function UpdatePost(props) {
                 <label class="custom-control-label" for="customRadio2">
                     Being Used
                 </label>
-            </div> */}
+            </div>
+
             <div className="form-group">
                 <label className="text-muted">User</label>
                 <input
@@ -112,6 +137,7 @@ export default function UpdatePost(props) {
             </div>
             <div>
                 <button className="btn btn-primary">Update</button>
+
             </div>
         </form>
     );
@@ -120,8 +146,18 @@ export default function UpdatePost(props) {
         <div className="container pb-5">
             <Nav />
             <br />
-            <h1>Update <span style={{ color: "blue" }}>{item}</span> Information</h1>
+            <h1>
+                Update <span style={{ color: "blue" }}>{item}</span> Information
+            </h1>
             {showUpdateForm()}
+            {getUser() && (
+                <button
+                    onClick={() => deleteConfirm(slug)}
+                    className="btn btn-danger px-3">
+                    Delete
+                </button>
+            )}
+
         </div>
     );
 }

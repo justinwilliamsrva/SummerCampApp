@@ -19,26 +19,26 @@ export default function Supplies() {
         fetchitems();
     }, []);
 
-    const deleteConfirm = (slug) => {
-        let answer = window.confirm("Are you sure you want to delete this item?");
+    // const deleteConfirm = (slug) => {
+    //     let answer = window.confirm("Are you sure you want to delete this item?");
 
-        if (answer) {
-            deleteitem(slug);
-        }
-    };
+    //     if (answer) {
+    //         deleteitem(slug);
+    //     }
+    // };
 
-    const deleteitem = (slug) => {
-        axios
-            .delete(`${process.env.REACT_APP_EQUIPT_API}/equiptment/${slug}`, {
-                headers: { authorization: `Bearer ${getToken()}` },
-            })
-            .then((response) => {
-                console.log(response);
-                alert(response.data.message);
-                fetchitems();
-            })
-            .catch((error) => alert(error));
-    };
+    // const deleteitem = (slug) => {
+    //     axios
+    //         .delete(`${process.env.REACT_APP_EQUIPT_API}/equiptment/${slug}`, {
+    //             headers: { authorization: `Bearer ${getToken()}` },
+    //         })
+    //         .then((response) => {
+    //             console.log(response);
+    //             alert(response.data.message);
+    //             fetchitems();
+    //         })
+    //         .catch((error) => alert(error));
+    // };
 
     return (
         <div className="container pb-5">
