@@ -65,7 +65,7 @@ const SingleCamper = (props) => {
                         Delete
                 </button>)}
 
-                <h2>{camper.first_name}  {camper.last_name} </h2>
+                <h2>{camper.first_name}  {camper.last_name} - {camper.age} - {camper.gender}</h2>
                 </div>
 
                 <hr/>
@@ -76,8 +76,6 @@ const SingleCamper = (props) => {
                 <p>Parent names: {camper.parent_names} </p>
                 <p>Parent number: {camper.parent_number} </p>
                 <p>Parent email: {camper.parent_email} </p>
-                <p>Age: {camper.age} </p>
-                <p>Gender: {camper.gender} </p>
                 <p>Allergies: {camper.allergies} </p>
 
 

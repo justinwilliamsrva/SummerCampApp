@@ -67,6 +67,7 @@ export default function App() {
                                     </span>
                                 </p>
                             </div>
+                            <hr/>
                             {getUser() && (
                                 <div className="col-md-2">
                                     <Link

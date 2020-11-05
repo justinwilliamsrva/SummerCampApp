@@ -6,9 +6,9 @@ const Nav = ({history}) => {
     return (
         <nav>
         <ul className="nav nav-tabs">
-            <li className="nav-item pr-3 pt-3 pb-3">
+            {/* <li className="nav-item pr-3 pt-3 pb-3">
                 <Link to="/calendar">Calendar</Link>
-            </li>
+            </li> */}
             <li className="nav-item pr-3 pt-3 pb-3">
                 <Link to="/campers">Campers</Link>
                 </li>
