@@ -28,7 +28,7 @@ const SingleCamper = (props) => {
 
     const deletePost = (slug) => {
         axios
-            .delete(`${process.env.REACT_APP_API}/post/${slug}`, {
+            .delete(`${process.env.REACT_APP_CAMPER_API}/camper/${slug}`, {
                 headers: { authorization: `Bearer ${getToken()}` },
             })
             .then((response) => {
