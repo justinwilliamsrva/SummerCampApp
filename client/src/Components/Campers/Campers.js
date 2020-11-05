@@ -40,7 +40,7 @@ export default function Supplies() {
                     {campers.map((camper, i) => (
 
                         <tr>
-                            <Link to={`/camper/update/${camper.slug}`}>
+                            <Link to={`/camper/${camper.slug}`}>
                                 <th key={camper._id}>{camper.first_name}</th>
                                 </Link>
                             <td>{camper.last_name}</td>
