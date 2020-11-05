@@ -10,8 +10,8 @@ import Supplies from "./Components/Supplies/Supplies";
 import UpdateSupplies from "./Components/Supplies/UpdateSupplies";
 import CreateSupplies from "./Components/Supplies/CreateSupplies";
 import Campers from "./Components/Campers/Campers";
-import SingleCamper from "./Components/Campers/SingleCampers";
-import UpdateCamper from "./Components/Campers/UpdateCampers";
+// import SingleCamper from "./Components/Campers/SingleCampers";
+// import UpdateCamper from "./Components/Campers/UpdateCampers";
 
 
 const Routes = () => {
@@ -29,8 +29,8 @@ const Routes = () => {
                 <PrivateRoute exact path="/equiptment/create" component={CreateSupplies} />
                 {/* Camper Routes */}
                 <Route exact path="/campers" component={Campers} />
-                <Route exact path="/camper/:slug" component={SingleCamper} />
-                <Route exact path="/camper/update/:slug" component={UpdateCamper} />
+                {/* <Route exact path="/camper/:slug" component={SingleCamper} /> */}
+                {/* <Route exact path="/camper/update/:slug" component={UpdateCamper} /> */}
 
             </Switch>
         </BrowserRouter>

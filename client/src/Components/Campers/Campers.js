@@ -4,55 +4,48 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { getUser, getToken } from "../../helpers";
 export default function Supplies() {
-    const [items, setitems] = useState([]);
+    const [campers, setcampers] = useState([]);
 
-    const fetchitems = () => {
+    const fetchcampers = () => {
         axios
-            .get(`${process.env.REACT_APP_EQUIPT_API}/equiptment`)
+            .get(`${process.env.REACT_APP_CAMPER_API}/campers`)
             .then((response) => {
-                console.log(response, setitems(response.data));
+                console.log(response, setcampers(response.data));
             })
             .catch((error) => alert(error));
     };
 
     useEffect(() => {
-        fetchitems();
+        fetchcampers();
     }, []);
 
 
     return (
         <div className="container pb-5">
             <Nav />
-            <h1>All Equiptment</h1>
+            <h1>All Campers</h1>
 
-            {getUser() && (
-                <Link to={`equiptment/create`} className="btn btn-lg btn-primary">
-                    Create a Item
-                </Link>
-            )}
             <br />
             <table class="table table-striped mt-1 table-responsive ">
                 <thead>
                     <tr>
-                        <th scope="col">Item</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Available</th>
-                        <th scope="col">Last User</th>
-                        <th scope="col">Notes</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Number</th>
+                        <th scope="col">Allergies</th>
                     </tr>
                 </thead>
                 <tbody>
 
-                    {items.map((item, i) => (
+                    {campers.map((camper, i) => (
 
                         <tr>
-                            <Link to={`/equiptment/update/${item.slug}`}>
-                                <th key={item._id}>{item.item}</th>
+                            <Link to={`/camper/update/${camper.slug}`}>
+                                <th key={camper._id}>{camper.first_name}</th>
                                 </Link>
-                            <td>{item.location}</td>
-                            {item.availability ? <td>In Stock</td> : <td>Being Used</td>}
-                            <td>{item.user}</td>
-                            <td>{item.notes}</td>
+                            <td>{camper.last_name}</td>
+                            <td>{camper.camper_number}</td>
+                            <td>{camper.allergies}</td>
                             </tr>
 
                     ))}
