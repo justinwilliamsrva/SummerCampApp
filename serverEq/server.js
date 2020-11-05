@@ -13,16 +13,7 @@ const equiptRoutes = require("./routes/equipt")
 const app = express();
 
 // db
-// mongoose
-//     .connect(process.env.MESSAGE_DATABASE, {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//         useCreateIndex: true,
-//         useFindAndModify: false,
 
-//     })
-//     .then(() => console.log("Message DB connected"))
-//     .catch((err) => console.log(err));
 
     mongoose
     .connect(process.env.EQUIPT_DATABASE, {

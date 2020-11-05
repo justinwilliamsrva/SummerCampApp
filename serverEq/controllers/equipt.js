@@ -18,7 +18,7 @@ exports.create = (req, res) => {
         case !availability:
             return res.status(400).json({ error: "Availability is required" });
             break;
-        
+
     }
 
     Equipt.create({item, location, availability, user, notes, slug }, (err, equipt) => {
@@ -43,16 +43,16 @@ exports.list = (req, res) => {
 exports.update = (req, res) => {
     const { slug } = req.params;
     const { title, content, user } = req.body;
-    Equipt.findOneAndUpdate({ slug }, { title, content, user }, { new: true }).exec((err, Equipt) => {
+    Equipt.findOneAndUpdate({ slug }, { title, content, user }, { new: true }).exec((err, equipt) => {
         if (err) console.log(err);
-        res.json(Equipt);
+        res.json(equipt);
     });
 };
 
-// exports.remove = (req, res) => {
-//     const { slug } = req.params;
-//     Equipt.findOneAndRemove({ slug }).exec((err, Equipt) => {
-//         if (err) console.log(err);
-//         res.json({ message: "Equipt deleted" });
-//     });
-// };
+exports.remove = (req, res) => {
+    const { slug } = req.params;
+    Equipt.findOneAndRemove({ slug }).exec((err, equipt) => {
+        if (err) console.log(err);
+        res.json({ message: "Equipt deleted" });
+    });
+};
