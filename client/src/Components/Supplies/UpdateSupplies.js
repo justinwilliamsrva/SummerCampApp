@@ -11,8 +11,8 @@ export default function UpdatePost(props) {
         user: "",
         availability: "",
         notes: "",
-    });
-    let history = useHistory();
+    })
+
     const { item, location, slug, user, availability, notes } = state;
     useEffect(() => {
         axios
@@ -61,6 +61,7 @@ export default function UpdatePost(props) {
             deletePost(slug);
         }
     };
+    let history = useHistory();
 
     const deletePost = (slug) => {
 

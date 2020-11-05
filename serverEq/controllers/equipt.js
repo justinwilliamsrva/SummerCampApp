@@ -15,9 +15,6 @@ exports.create = (req, res) => {
         case !location:
             return res.status(400).json({ error: "Location is required" });
             break;
-        case !availability:
-            return res.status(400).json({ error: "Availability is required" });
-            break;
 
     }
 

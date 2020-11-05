@@ -26,7 +26,7 @@ const equiptSchema = new mongoose.Schema(
         },
         availability: {
             type: Boolean,
-            required: true,
+            default: true,
         },
         user: {
             type: String,
@@ -37,7 +37,7 @@ const equiptSchema = new mongoose.Schema(
             trim: true,
             min: 3,
             max: 160,
-           
+
         },
     },
     { timestamps: true }
