@@ -1,4 +1,4 @@
-const Camper = require("../models/Camper");
+const Camper = require("../models/camper");
 
 const slugify = require("slugify");
 
