@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Nav from "./Nav";
-import { getUser, getToken } from "./helpers";
+import Nav from "../../Nav";
+import { getUser, getToken } from "../../helpers";
 
 export default function UpdatePost(props) {
     const [state, setState] = useState({

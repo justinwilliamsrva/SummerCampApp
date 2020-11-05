@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Nav from "./Nav";
-import { getUser, getToken } from "./helpers";
+import Nav from "../../Nav";
+import { getUser, getToken } from "../../helpers";
 
 const Create = () => {
     // state
@@ -56,7 +56,7 @@ const Create = () => {
                         value={title}
                         type="text"
                         className="form-control"
-                        
+
                         required
                     />
                 </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Nav from "./Nav";
+import Nav from "../../Nav";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { getUser, getToken } from "./helpers";
+import { getUser, getToken } from "../../helpers";
 import "./App.css";
 export default function App() {
     const [posts, setPosts] = useState([]);
@@ -63,12 +63,17 @@ export default function App() {
                                     Author<span className="badge">{post.user}</span> Published on
                                     {""}
                                     <span className="badge">
-                                        {new Date(post.createdAt).toLocaleString()}
+                                        {new Date(post.updatedAt).toLocaleString()}
                                     </span>
                                 </p>
                             </div>
                             {getUser() && (
                                 <div className="col-md-2">
+                                    <Link
+                                        to={`/post/update/${post.slug}`}
+                                        className="btn btn-sm btn-outline-warning mr-1">
+                                        Update
+                                    </Link>
                                     <button
                                         onClick={() => deleteConfirm(post.slug)}
                                         className="btn btn-sm btn-outline-danger">
