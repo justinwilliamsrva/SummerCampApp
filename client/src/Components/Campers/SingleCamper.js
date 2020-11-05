@@ -49,16 +49,21 @@ const SingleCamper = (props) => {
             <br />
             <div className="col-md-10">
             <div>
-                <Link
+            <Link
+                    to={`/campers`}
+                    className="btn btn-sm btn-outline-primary mr-1">
+                    Campers
+                </Link>
+                    <Link
                     to={`/camper/update/${camper.slug}`}
                     className="btn btn-sm btn-outline-warning mr-1">
                     Update
                 </Link>
-                <button
-                    onClick={() => deleteConfirm(camper.slug)}
-                    className="btn btn-sm btn-outline-danger">
+                    {getUser() && (<button
+                        onClick={() => deleteConfirm(camper.slug)}
+                        className="btn btn-sm btn-outline-danger">
                         Delete
-                </button>
+                </button>)}
 
                 <h2>{camper.first_name}  {camper.last_name} </h2>
                 </div>
