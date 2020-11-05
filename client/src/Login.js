@@ -33,7 +33,7 @@ const Login = (props) => {
             .then(response => {
                 console.log(response);
                 // response will contain token
-                authenticate(response,()=> props.history.push('/create'))
+                authenticate(response,()=> props.history.push('/'))
                 // redirect to
             })
             .catch(error => {
