@@ -60,7 +60,7 @@ const SingleCamper = (props) => {
                         Delete
                 </button>
 
-                <h2>{camper.first_name},{camper.last_name} </h2>
+                <h2>{camper.first_name}  {camper.last_name} </h2>
                 </div>
 
                 <hr/>

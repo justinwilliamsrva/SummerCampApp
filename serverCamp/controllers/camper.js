@@ -39,7 +39,7 @@ exports.read = (req, res) => {
 exports.update = (req, res) => {
     const { slug } = req.params;
     const { first_name, last_name, counselor,address,camper_number,parent_names,parent_number,parent_email,age,gender,allergies} = req.body;
-    Camper.findOneAndUpdate({ slug }, { first_name, last_name, counselor,address,student_number,parent_names,parent_number,parent_email,age,gender,allergies }, { new: true }).exec((err, camper) => {
+    Camper.findOneAndUpdate({ slug }, { first_name, last_name, camper_number, counselor,address,parent_names,parent_number,parent_email,age,gender,allergies }, { new: true }).exec((err, camper) => {
         if (err) console.log(err);
         res.json(camper);
     });

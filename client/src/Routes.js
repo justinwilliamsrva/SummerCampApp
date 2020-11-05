@@ -11,7 +11,7 @@ import UpdateSupplies from "./Components/Supplies/UpdateSupplies";
 import CreateSupplies from "./Components/Supplies/CreateSupplies";
 import Campers from "./Components/Campers/Campers";
 import SingleCamper from "./Components/Campers/SingleCamper";
-// import UpdateCamper from "./Components/Campers/UpdateCampers";
+import UpdateCamper from "./Components/Campers/UpdateCamper";
 
 
 const Routes = () => {
@@ -30,7 +30,7 @@ const Routes = () => {
                 {/* Camper Routes */}
                 <Route exact path="/campers" component={Campers} />
                 <Route exact path="/camper/:slug" component={SingleCamper} />
-                {/* <Route exact path="/camper/update/:slug" component={UpdateCamper} /> */}
+                <Route exact path="/camper/update/:slug" component={UpdateCamper} />
 
             </Switch>
         </BrowserRouter>
