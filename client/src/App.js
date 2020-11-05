@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { getUser, getToken } from "./helpers";
+import "./App.css";
 export default function App() {
     const [posts, setPosts] = useState([]);
 
@@ -43,17 +44,22 @@ export default function App() {
     return (
         <div className="container pb-5">
             <Nav />
-            <h1>All Posts</h1>
+            <h1>All Messages</h1>
+            <Link
+                                        to={`/create`}
+                                        className="btn btn-lg btn-primary">
+                                        Create a New Message
+                                    </Link>
             <br />
             {posts.map((post, i) => (
                 <div className="row" key={post._id}>
                     <div className="col pt-3 pb-2">
                         <div className="row">
                             <div className="col-md-10">
-                                <Link to={`/post/${post.slug}`}>
+
                                     <h2>{post.title}</h2>
-                                </Link>
-                                <p className="lead">{post.content.substring(0, 10)}</p>
+
+                                <p className="lead">{post.content}</p>
                                 <p>
                                     Author<span className="badge">{post.user}</span> Published on
                                     {""}
@@ -64,11 +70,6 @@ export default function App() {
                             </div>
                             {getUser() && (
                                 <div className="col-md-2">
-                                    <Link
-                                        to={`/post/update/${post.slug}`}
-                                        className="btn btn-sm btn-outline-warning mr-1">
-                                        Update
-                                    </Link>
                                     <button
                                         onClick={() => deleteConfirm(post.slug)}
                                         className="btn btn-sm btn-outline-danger">

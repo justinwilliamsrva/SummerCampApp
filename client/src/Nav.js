@@ -7,13 +7,13 @@ const Nav = ({history}) => {
         <nav>
         <ul className="nav nav-tabs">
             <li className="nav-item pr-3 pt-3 pb-3">
-                <Link to="/">Calendar</Link>
+                <Link to="/calendar">Calendar</Link>
             </li>
             <li className="nav-item pr-3 pt-3 pb-3">
                 <Link to="/campers">Campers</Link>
                 </li>
                 <li className="nav-item pr-3 pt-3 pb-3">
-                <Link to="/messages">Messages</Link>
+                <Link to="/">Messages</Link>
                 </li>
                 <li className="nav-item pr-3 pt-3 pb-3">
                 <Link to="/equiptment">Supplies</Link>
