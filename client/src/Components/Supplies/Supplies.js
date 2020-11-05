@@ -51,7 +51,7 @@ export default function Supplies() {
                 </Link>
             )}
             <br />
-            <table class="table table-striped table-hover">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Item</th>
@@ -70,7 +70,7 @@ export default function Supplies() {
                                 <th key={item._id}>{item.item}</th>
                                 </Link>
                             <td>{item.location}</td>
-                            <td>{item.availability}</td>
+                            {item.availability ? <td>In Stock</td> : <td>Being Used</td>}
                             <td>{item.user}</td>
                             <td>{item.notes}</td>
                             </tr>
