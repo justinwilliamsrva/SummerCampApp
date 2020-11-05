@@ -11,7 +11,7 @@ const {requireSignin} = require("../controllers/auth")
 
 // route
 router.post("/camper/create",create)
-router.get("/camper", list);
+router.get("/campers", list);
 router.get("/camper/:slug", read);
 router.put("/camper/:slug", update);
 router.delete("/camper/:slug",requireSignin, remove);
