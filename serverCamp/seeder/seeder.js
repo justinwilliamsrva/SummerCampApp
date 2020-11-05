@@ -1,4 +1,4 @@
-{
+[{
     "first_name": "Hike",
     "last_name": "Hall",
     "counselor": "Mark",
@@ -26,4 +26,4 @@
     "gender": "Female",
     "allergies": "peanuts"
 
-}
+}]
