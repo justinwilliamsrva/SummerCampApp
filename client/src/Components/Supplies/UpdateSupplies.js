@@ -47,7 +47,7 @@ export default function UpdatePost(props) {
 
                 setState({ ...state, item, location, slug, user, availability, notes });
                 // show sucess alert
-                alert(`Post titled '${item}' is updated`);
+                alert(`The item'${item}' is updated`);
             })
             .catch((error) => {
                 console.log(error.response);
@@ -67,7 +67,7 @@ export default function UpdatePost(props) {
                     required
                 />
             </div>
-            <label className="text-muted">Availability</label>
+            {/* <label className="text-muted">Availability</label>
             <div class="custom-control custom-radio">
                 <input
                     type="radio"
@@ -89,7 +89,7 @@ export default function UpdatePost(props) {
                 <label class="custom-control-label" for="customRadio2">
                     Being Used
                 </label>
-            </div>
+            </div> */}
             <div className="form-group">
                 <label className="text-muted">User</label>
                 <input

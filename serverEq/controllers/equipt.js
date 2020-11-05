@@ -51,8 +51,8 @@ exports.read = (req, res) => {
 
 exports.update = (req, res) => {
     const { slug } = req.params;
-    const { title, content, user } = req.body;
-    Equipt.findOneAndUpdate({ slug }, { title, content, user }, { new: true }).exec((err, equipt) => {
+    const { item, location, user, availability, notes} = req.body;
+    Equipt.findOneAndUpdate({ slug }, { item, location, user, availability, notes }, { new: true }).exec((err, equipt) => {
         if (err) console.log(err);
         res.json(equipt);
     });
