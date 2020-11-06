@@ -1,9 +1,12 @@
 
 section{
 
-   
+    overflow-y: scroll;
+    overflow-x: hidden;
     width: 100%;
     margin-top: 8vh;
     margin-bottom: 8vh;
     background-color: burlywood;
+    height: 84vh;
+    padding-left: 4vw;
 }
