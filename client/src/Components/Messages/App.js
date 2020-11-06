@@ -46,14 +46,16 @@ export default function App() {
         <div>
             <Nav />
             <section>
+                <div id="app-header">
             <h1>All Messages</h1>
             {getUser() && (
                 <Link to={`/create`} className="btn btn-lg btn-primary">
                     Create a New Message
                 </Link>
                 )}
+            </div>
                 <hr />
-     
+
             {posts.map((post, i) => (
                 <div className="row" key={post._id}>
                     <div className="col pt-3 pb-2">

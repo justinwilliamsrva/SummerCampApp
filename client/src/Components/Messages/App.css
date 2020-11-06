@@ -6,7 +6,25 @@ section{
     width: 100%;
     margin-top: 8vh;
     margin-bottom: 8vh;
-    background-color: burlywood;
+    background-color: lightcoral;
     height: 84vh;
     padding-left: 4vw;
+
+}
+
+
+
+
+@media only screen and (max-width: 450px) {
+    section{
+
+        padding-right: 2vw;
+        margin-top: 10vh;
+
+    }
+
+    #app-header{
+
+        text-align: center;
+    }
 }

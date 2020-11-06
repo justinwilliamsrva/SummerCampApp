@@ -8,6 +8,7 @@
     color: white;
     text-align: center;
     z-index: 10;
+    padding-left: 4vw;
 }
 img,
 h3 {
@@ -17,10 +18,12 @@ h3 {
     margin-left: 10px;
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 450px) {
     #heading {
         /* display: none; */
         /* font-size: medium; */
         display: block;
+
     }
+    #nav {height: 10vh}
 }
