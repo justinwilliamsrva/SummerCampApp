@@ -1,0 +1,80 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20201107T180000Z
+DTEND:20201107T193000Z
+DTSTAMP:20201106T000057Z
+ORGANIZER;CN=Christopher Beaufort:mailto:cbeaufort@2u.com
+UID:3n8s9in2o7q80uqbh2kql8mveq@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Christopher Beaufort;X-NUM-GUESTS=0:mailto:cbeaufort@2u.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=TENTATIVE;RSVP=TRU
+ E;CN=Sandra Templeton;X-NUM-GUESTS=0:mailto:stempleton@2u.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=dkitchen@richmond.edu;X-NUM-GUESTS=0:mailto:dkitchen@richmond.edu
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=TENTATIVE;RSVP=TRU
+ E;CN=jcampbel@richmond.edu;X-NUM-GUESTS=0:mailto:jcampbel@richmond.edu
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=gchieffo@richmond.edu;X-NUM-GUESTS=0:mailto:gchieffo@richmond.edu
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=melin.jonathan@gmail.com;X-NUM-GUESTS=0:mailto:melin.jonathan@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=trentonschneider@gmail.com;X-NUM-GUESTS=0:mailto:trentonschneider@g
+ mail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=simply.joseph00@gmail.com;X-NUM-GUESTS=0:mailto:simply.joseph00@gma
+ il.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=sarah.kerr93@gmail.com;X-NUM-GUESTS=0:mailto:sarah.kerr93@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=justin.williams2@me.com;X-NUM-GUESTS=0:mailto:justin.williams2@me.c
+ om
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=channa.mik@gmail.com;X-NUM-GUESTS=0:mailto:channa.mik@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=alvinzcoxiv@gmail.com;X-NUM-GUESTS=0:mailto:alvinzcoxiv@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=hallhammr@gmail.com;X-NUM-GUESTS=0:mailto:hallhammr@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=mapaige7@gmail.com;X-NUM-GUESTS=0:mailto:mapaige7@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=masterson.kendall@gmail.com;X-NUM-GUESTS=0:mailto:masterson.kendall
+ @gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=patrick.mahloy@gmail.com;X-NUM-GUESTS=0:mailto:patrick.mahloy@gmail
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=suvarnalisa@yahoo.com;X-NUM-GUESTS=0:mailto:suvarnalisa@yahoo.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=dolanpettit@gmail.com;X-NUM-GUESTS=0:mailto:dolanpettit@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=mandylloyd720@gmail.com;X-NUM-GUESTS=0:mailto:mandylloyd720@gmail.c
+ om
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=simplyjacob00@gmail.com;X-NUM-GUESTS=0:mailto:simplyjacob00@gmail.c
+ om
+X-MICROSOFT-CDO-OWNERAPPTID:1980980295
+CREATED:20200917T180809Z
+DESCRIPTION:Zoom Link:<br><a href="https://zoom.us/j/8082581314?pwd=REdwWmJ
+ LbWEyNnREWlhLTWQwV3lkQT09">https://zoom.us/j/8082581314?pwd=REdwWmJLbWEyNnR
+ EWlhLTWQwV3lkQT09</a><br>https://zoom.us/my/<strong>fullstackcommencementce
+ remony052020</strong>&nbsp\;&nbsp\;<br><br>Please join us as we celebrate o
+ ur newest FSF Bootcamp Graduates.\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this 
+ section of the description.\n\nView your event at https://calendar.google.c
+ om/calendar/event?action=VIEW&eid=M244czlpbjJvN3E4MHVxYmgya3FsOG12ZXEganVzd
+ GluLndpbGxpYW1zMkBtZS5jb20&tok=MTYjY2JlYXVmb3J0QDJ1LmNvbTBhZjkwZjNiZGUxNTI2
+ ZmM5NjEwZTYwNjNkODk5NGZhMWViODc2MmM&ctz=America%2FNew_York&hl=en&es=1.\n-::
+ ~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~::~:~::-
+LAST-MODIFIED:20201106T000055Z
+LOCATION:https://zoom.us/j/8082581314?pwd=REdwWmJLbWEyNnREWlhLTWQwV3lkQT09
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Full Stack Graduation (Richmond)
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

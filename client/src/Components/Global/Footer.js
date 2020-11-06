@@ -4,19 +4,19 @@ import "./Footer.css";
 
 const Footer = ({ history }) => {
     return (
-        <footer id="footer" className="d-flex justify-content-center">
-            <ul className="nav ">
-                <li className=" px-2 pt-3 pb-3">
-                    <Link to="/campers">Campers</Link>
+        <footer id="footer"className="d-flex justify-content-between" >
+            <ul id="footerList" className="nav mx-4 py-md-0 py-lg-1 d-flex justify-content-between">
+                <li className="pt-1 pt-lg-0 pb-2">
+                    <Link to="/campers"><img src="boy.png"/></Link>
                 </li>
-                <li className="px-2 pt-3 pb-3">
-                    <Link to="/">Messages</Link>
+                <li className="pt-2 pt-lg-0 pb-2">
+                    <Link to="/"><img src="message.png"/></Link>
                 </li>
-                <li className="px-2 pt-3 pb-3">
+                <li className="pt-1 pt-lg-0 pb-2">
                     <Link to="/equiptment"><img src="/petition.png"/></Link>
                 </li>
-                <li className="px-2 pt-3 pb-3">
-                    <Link to="/more"><img src="/more-24px.png"/></Link>
+                <li className="pt-1 pt-lg-0 pb-2">
+                    <Link to="/more"><img src="/more.png"/></Link>
                 </li>
             </ul>
         </footer>
