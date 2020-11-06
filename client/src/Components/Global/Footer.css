@@ -8,6 +8,6 @@
     color: white;
     text-align: center;
     padding-top: auto;
-    padding-bottom: auto;
+    /* padding-bottom: auto; */
     z-index:10;
 }

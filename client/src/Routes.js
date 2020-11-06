@@ -12,6 +12,8 @@ import CreateSupplies from "./Components/Supplies/CreateSupplies";
 import Campers from "./Components/Campers/Campers";
 import SingleCamper from "./Components/Campers/SingleCamper";
 import UpdateCamper from "./Components/Campers/UpdateCamper";
+import More from "./Components/More";
+
 
 
 const Routes = () => {
@@ -31,6 +33,9 @@ const Routes = () => {
                 <Route exact path="/campers" component={Campers} />
                 <Route exact path="/camper/:slug" component={SingleCamper} />
                 <Route exact path="/camper/update/:slug" component={UpdateCamper} />
+
+                <Route exact path="/more" component={More} />
+
 
             </Switch>
         </BrowserRouter>
