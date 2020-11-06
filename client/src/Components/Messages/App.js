@@ -45,6 +45,7 @@ export default function App() {
     return (
         <div className="container pb-5">
             <Nav />
+            <section>
             <h1>All Messages</h1>
             {getUser() && (
                 <Link to={`/create`} className="btn btn-lg btn-primary">
@@ -87,6 +88,7 @@ export default function App() {
                     </div>
                 </div>
             ))}
+                </section>
              <Footer />
         </div>
 
