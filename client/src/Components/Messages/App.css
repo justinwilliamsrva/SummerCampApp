@@ -28,3 +28,14 @@ section{
         text-align: center;
     }
 }
+
+
+@media only screen and (max-height: 700px) {
+
+    section{
+
+
+        padding-top: 20vh;
+
+    }
+}

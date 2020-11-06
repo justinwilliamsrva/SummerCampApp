@@ -7,11 +7,12 @@ const Create = () => {
     // state
     const [state, setState] = useState({
         item: "",
+        availability:"",
         location: "",
         notes: ""
     });
     // destructure values from state
-    const { item, location, notes} = state;
+    const { item, location,availability, notes} = state;
 
     // onchange event handler
     const handleChange = (name) => (event) => {
@@ -27,12 +28,12 @@ const Create = () => {
         axios
             .post(
                 `${process.env.REACT_APP_EQUIPT_API}/equiptment/create`,
-                {item, location, notes}
+                {item, location, availability, notes}
             )
             .then((response) => {
                 console.log(response);
                 // empty state
-                setState({ ...state, item:"", location:"", notes:""});
+                setState({ ...state, item:"",availability:"", location:"", notes:""});
                 // show sucess alert
                 alert(`You have added ${response.data.item} to the supplies database`);
                 let page = window.confirm("Would you like to add another item");
@@ -60,7 +61,7 @@ const Create = () => {
                 <input
                     onChange={handleChange("item")}
                     value={item}
-                    type="item"
+                    type="text"
                         className="form-control"
                         placeholder="Item Name"
                     required
@@ -73,7 +74,18 @@ const Create = () => {
                     value={location}
                     type="text"
                         className="form-control"
-                        placeholder="Where will this item be stored"
+                        placeholder="Where will this item be stored?"
+                    required
+                />
+                </div>
+               <div className="form-group">
+                <label className="text-muted">Status</label>
+                <input
+                    onChange={handleChange("availability")}
+                    value={availability}
+                    type="text"
+                        className="form-control"
+                        placeholder="What is the Status?"
                     required
                 />
             </div>

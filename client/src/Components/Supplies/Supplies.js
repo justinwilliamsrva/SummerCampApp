@@ -50,7 +50,7 @@ export default function Supplies() {
                                 <th key={item._id}>{item.item}</th>
                                 </Link>
                             <td>{item.location}</td>
-                            {item.availability ? <td>In Stock</td> : <td>Being Used</td>}
+                            <td>{item.availability}</td>
                             <td>{item.user}</td>
                             <td>{item.notes}</td>
                             </tr>

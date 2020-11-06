@@ -93,28 +93,15 @@ export default function UpdatePost(props) {
                 />
             </div>
 
-            <label className="text-muted">Availability</label>
-            <div class="custom-control custom-radio">
+            <div className="form-group">
+                <label className="text-muted">Status</label>
                 <input
-                    type="radio"
-                    id="customRadio1"
-                    name="customRadio"
-                    class="custom-control-input"
+                    onChange={handleChange("availability")}
+                    value={availability}
+                    type="text"
+                    className="form-control"
+                    required
                 />
-                <label class="custom-control-label" for="customRadio1">
-                    In stock
-                </label>
-            </div>
-            <div class="custom-control custom-radio">
-                <input
-                    type="radio"
-                    id="customRadio2"
-                    name="customRadio"
-                    class="custom-control-input"
-                />
-                <label class="custom-control-label" for="customRadio2">
-                    Being Used
-                </label>
             </div>
 
             <div className="form-group">

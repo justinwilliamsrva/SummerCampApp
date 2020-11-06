@@ -25,8 +25,11 @@ const equiptSchema = new mongoose.Schema(
             required: true,
         },
         availability: {
-            type: Boolean,
-            default: true,
+            type: String,
+            trim: true,
+            min: 3,
+            max: 160,
+            required: true,
         },
         user: {
             type: String,

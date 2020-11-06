@@ -27,3 +27,8 @@ h3 {
     }
     #nav {height: 10vh}
 }
+
+@media only screen and (max-height: 600px) {
+    
+    #nav {height: 20vh}
+}
