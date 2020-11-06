@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
+import { useHistory } from "react-router-dom";
+
 
 export default function UpdatePost(props) {
     const [state, setState] = useState({
@@ -26,7 +28,7 @@ export default function UpdatePost(props) {
         // console.log('name', name, 'event', event.target.value);
         setState({ ...state, [name]: event.target.value });
     };
-
+    let history = useHistory();
     const handleSubmit = (event) => {
         event.preventDefault();
         // console.table({ title, content, user });
@@ -43,6 +45,7 @@ export default function UpdatePost(props) {
                 setState({ ...state, title, content, user, slug });
                 // show sucess alert
                 alert(`Post titled ${title} is updated`);
+                history.push("/");
             })
             .catch((error) => {
                 console.log(process.env.REACT_APP_API);

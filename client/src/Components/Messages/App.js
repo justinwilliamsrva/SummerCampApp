@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { getUser, getToken } from "../../helpers";
 import "./App.css";
+import Footer from "../Global/Footer"
 export default function App() {
     const [posts, setPosts] = useState([]);
 
@@ -86,6 +87,8 @@ export default function App() {
                     </div>
                 </div>
             ))}
+             <Footer />
         </div>
+
     );
 }
