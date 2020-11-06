@@ -43,7 +43,7 @@ export default function App() {
     };
 
     return (
-        <div className="container pb-5">
+        <div>
             <Nav />
             <section>
             <h1>All Messages</h1>
@@ -62,14 +62,14 @@ export default function App() {
 
                                 <p className="lead">{post.content}</p>
                                 <p>
-                                    Author<span className="badge">{post.user}</span> Published on
+                                    From<span className="badge">{post.user}</span> Published on
                                     {""}
                                     <span className="badge">
                                         {new Date(post.updatedAt).toLocaleString()}
                                     </span>
                                 </p>
                             </div>
-                            <hr/>
+
                             {getUser() && (
                                 <div className="col-md-2">
                                     <Link
@@ -85,6 +85,7 @@ export default function App() {
                                 </div>
                             )}
                         </div>
+                        <hr/>
                     </div>
                 </div>
             ))}
