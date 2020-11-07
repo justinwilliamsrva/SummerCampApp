@@ -3,6 +3,9 @@ import Nav from "../../Nav";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { getUser, getToken } from "../../helpers";
+import "../Messages/App.css";
+import Footer from "../Global/Footer";
+
 export default function Supplies() {
     const [items, setitems] = useState([]);
 
@@ -21,8 +24,10 @@ export default function Supplies() {
 
 
     return (
-        <div className="container pb-5">
+        <div>
+
             <Nav />
+            <section>
             <h1>All Equiptment</h1>
 
             {getUser() && (
@@ -58,7 +63,9 @@ export default function Supplies() {
                     ))}
 
                 </tbody>
-            </table>
+                </table>
+            </section>
+            <Footer />
         </div>
     );
 }

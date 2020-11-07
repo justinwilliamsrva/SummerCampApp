@@ -4,6 +4,8 @@ import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
 import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom";
+import "../Messages/App.css";
+import Footer from "../Global/Footer";
 
 
 const SingleCamper = (props) => {
@@ -44,8 +46,9 @@ const SingleCamper = (props) => {
 
 
     return (
-        <div className="container pb-5">
+        <div>
             <Nav />
+            <section>
             <br />
             <div className="col-md-10">
             <div>
@@ -80,7 +83,8 @@ const SingleCamper = (props) => {
 
 
             </div>
-
+            </section>
+            <Footer />
         </div>
     );
 };

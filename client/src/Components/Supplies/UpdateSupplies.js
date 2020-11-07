@@ -3,6 +3,10 @@ import axios from "axios";
 import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
 import { useHistory } from "react-router-dom";
+import "../Messages/App.css";
+import Footer from "../Global/Footer";
+
+
 export default function UpdatePost(props) {
     const [state, setState] = useState({
         item: "",
@@ -132,8 +136,9 @@ export default function UpdatePost(props) {
     );
 
     return (
-        <div className="container pb-5">
+        <div >
             <Nav />
+            <section>
             <br />
             <h1>
                 Update <span style={{ color: "blue" }}>{item}</span> Information
@@ -146,7 +151,8 @@ export default function UpdatePost(props) {
                     Delete
                 </button>
             )}
-
+            </section>
+            <Footer />
         </div>
     );
 }

@@ -3,7 +3,8 @@ import axios from "axios";
 import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
 import { useHistory } from "react-router-dom";
-
+import "./App.css";
+import Footer from "../Global/Footer";
 
 export default function UpdatePost(props) {
     const [state, setState] = useState({
@@ -96,11 +97,14 @@ export default function UpdatePost(props) {
     );
 
     return (
-        <div className="container pb-5">
+        <div>
             <Nav />
-            <br />
-            <h1>Update Post</h1>
-            {showUpdateForm()}
+            <section>
+                <br />
+                <h1>Update Post</h1>
+                {showUpdateForm()}
+            </section>
+            <Footer />
         </div>
     );
 }

@@ -3,6 +3,9 @@ import axios from "axios";
 import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
 import { useHistory } from "react-router-dom";
+import "./App.css";
+import Footer from "../Global/Footer"
+
 const Create = () => {
     // state
     const [state, setState] = useState({
@@ -39,8 +42,9 @@ const Create = () => {
                 let page = window.confirm("Would like like to make another announcement");
                 if (page == true) {
                     history.push("/create");
+                } else {
+                    history.push("/");
                 }
-                else { history.push("/"); }
             })
             .catch((error) => {
                 console.log(process.env.REACT_APP_API);
@@ -50,12 +54,13 @@ const Create = () => {
     };
 
     return (
-        <div className="container pb-5">
+        <div>
             <Nav />
+            <section>
             <h1>CREATE A NEW ANNOUNCEMENT</h1>
             <br />
 
-            <form className="card" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className="text-muted">Announcement</label>
                     <input
@@ -90,7 +95,9 @@ const Create = () => {
                 <div>
                     <button className="btn btn-primary">Create</button>
                 </div>
-            </form>
+                </form>
+            </section>
+            <Footer />
         </div>
     );
 };

@@ -3,6 +3,8 @@ import axios from "axios";
 import Nav from "../../Nav";
 import { getUser, getToken } from "../../helpers";
 import { useHistory } from "react-router-dom";
+import "../Messages/App.css";
+import Footer from "../Global/Footer";
 const Create = () => {
     // state
     const [state, setState] = useState({
@@ -50,11 +52,10 @@ const Create = () => {
     };
 
     return (
-        <div className="container pb-5">
+        <div>
             <Nav />
+            <section>
             <h1>ADD AN ITEM</h1>
-            <br />
-
             <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <label className="text-muted">Item</label>
@@ -103,7 +104,9 @@ const Create = () => {
                 <button className="btn btn-primary">Create</button>
 
             </div>
-        </form>
+                </form>
+            </section>
+            <Footer />
         </div>
     );
 };
