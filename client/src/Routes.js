@@ -32,7 +32,7 @@ const Routes = () => {
                 {/* Camper Routes */}
                 <Route exact path="/campers" component={Campers} />
                 <Route exact path="/camper/:slug" component={SingleCamper} />
-                <Route exact path="/camper/update/:slug" component={UpdateCamper} />
+                <Private Route exact path="/camper/update/:slug" component={UpdateCamper} />
 
                 <Route exact path="/more" component={More} />
 
