@@ -55,7 +55,7 @@ const Create = () => {
             <h1>CREATE A NEW ANNOUNCEMENT</h1>
             <br />
 
-            <form onSubmit={handleSubmit}>
+            <form className="card" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className="text-muted">Announcement</label>
                     <input

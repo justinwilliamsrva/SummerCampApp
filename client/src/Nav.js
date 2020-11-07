@@ -11,16 +11,16 @@ const Nav = ({ history }) => {
 
             <ul className="nav ml-auto">
                 {!getUser() && (
-                    <li className="nav-item ml-auto pr-3">
-                        <Link to="/login">Login</Link>
+                    <li className="nav-item ml-auto">
+                        <Link className="btn btn-primary" to="/login">Login</Link>
                     </li>
                 )}
                 {getUser() && (
                     <li
                         onClick={() => logout(() => history.push("/"))}
                         style={{ cursor: "pointer" }}
-                        className="nav-item ml-auto pr-3">
-                        Logout
+                        className="nav-item  ml-auto">
+                        <button className="btn btn-warning">Logout</button>
                     </li>
                 )}
             </ul>
