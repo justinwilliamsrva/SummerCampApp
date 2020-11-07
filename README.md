@@ -38,7 +38,7 @@
 
 ### Authenticated Users have access to CRUD options that a viewer does not have.
 <p align="center">
-	<img src="./client/public/website1.jpg" width="550">
+	<img src="./client/public/Website1.jpg" width="550">
 </p>
 
 ## Further Development
