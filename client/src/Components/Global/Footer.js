@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = ({ history }) => {
     return (
         <footer id="footer"className="d-flex justify-content-between" >
-            <ul id="footerList" className="nav mx-4 py-md-0 py-lg-1 d-flex justify-content-between">
+            <ul id="footerList" className="nav mx-4 py-1 py-md-2 py-lg-2 d-flex justify-content-between">
                 <li className="pt-1 pt-lg-0 pb-2">
                     <Link to="/campers"><img src="boy.png"/></Link>
                 </li>
