@@ -18,6 +18,7 @@ h3 {
     margin-left: 10px;
 }
 
+#heading{font-family: 'Josefin Sans', sans-serif;}
 @media only screen and (max-width: 450px) {
     #heading {
         /* display: none; */
