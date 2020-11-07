@@ -65,10 +65,11 @@ export default function App() {
 
                                 <p className="lead">{post.content}</p>
                                 <p>
-                                    From <span className="badge badge-pill badge-success"> {post.user}</span> Published on
+                                    From <span className="badge badge-pill badge-success"> {post.user}</span> <span id="publish">Published on
                                     {" "}
-                                    <span className="badge badge badge-pill badge-info">
+                                    <span  className="badge badge badge-pill badge-info">
                                         {new Date(post.updatedAt).toLocaleString()}
+                                    </span>
                                     </span>
                                 </p>
                             </div>
