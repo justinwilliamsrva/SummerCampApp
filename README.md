@@ -2,7 +2,7 @@
 	<img
 		width="300"
 		alt="The Lounge"
-		src="/fire.png">
+		src="./client/fire1.png">
 </h1>
 
 <h3 align="center">
