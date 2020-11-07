@@ -41,7 +41,7 @@ export default function Supplies() {
                     <tr>
                         <th scope="col">Item</th>
                         <th scope="col">Location</th>
-                        <th scope="col">Available</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Last User</th>
                         <th scope="col">Notes</th>
                     </tr>

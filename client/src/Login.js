@@ -3,6 +3,8 @@ import axios from "axios"
 import { Link, withRouter } from "react-router-dom"
 import Nav from "./Nav"
 import { authenticate, getUser } from "./helpers"
+import "./Components/Messages/App.css";
+import Footer from "./Components/Global/Footer";
 
 
 
@@ -44,8 +46,9 @@ const Login = (props) => {
     };
 
     return (
-        <div className="container pb-5">
-            <Nav/>
+        <div>
+            <Nav />
+            <section>
             <h1>LOGIN</h1>
             <br />
 
@@ -77,6 +80,8 @@ const Login = (props) => {
                     <button className="btn btn-primary">Login</button>
                 </div>
             </form>
+            </section>
+            <Footer />
             </div>
     )}
 export default withRouter(Login);

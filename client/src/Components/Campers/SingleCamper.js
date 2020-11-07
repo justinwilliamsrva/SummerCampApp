@@ -49,7 +49,7 @@ const SingleCamper = (props) => {
         <div>
             <Nav />
             <section>
-            <br />
+
             <div className="col-md-10">
             <div>
             <Link
@@ -70,9 +70,7 @@ const SingleCamper = (props) => {
 
                 <h2>{camper.first_name}  {camper.last_name} - {camper.age} - {camper.gender}</h2>
                 </div>
-
                 <hr/>
-                <br />
                 <p>Counselor: {camper.counselor} </p>
                 <p>Address: {camper.address} </p>
                 <p>Camper number: {camper.camper_number} </p>

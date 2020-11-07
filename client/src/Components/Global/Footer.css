@@ -27,7 +27,7 @@
 
 
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 650px) {
 
     #footer {height: 15vh;}
 }
