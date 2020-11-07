@@ -15,7 +15,7 @@
 	</strong>
 </p>
 <p align="center">
-	<img src="./client/public/website.JPEG" width="550">
+	<img src="./client/public/website.JPG" width="550">
 </p>
 
 ## Overview
