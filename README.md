@@ -1,7 +1,7 @@
 <h1 align="center">
 	<img
 		width="300"
-		alt="The Lounge"
+		alt="Summer camp app"
 		src="./client/public/fire1.png">
 </h1>
 
@@ -38,7 +38,7 @@
 
 ### Authenticated Users have access to CRUD options that a viewer does not have.
 <p align="center">
-	<img src="./client/public/Website1.JPG" width="550">
+	<img src="./client/public/website1.jpg" width="550">
 </p>
 
 ## Further Development
@@ -46,11 +46,11 @@
 - **Admin can give different access to certain logged in users**
 - **Hash Passwords as user types**
 - **Change equipment status without needing a new page**
--**Expand the More features on larger screens**
--**Create a calendar show current day activities**
--**Dashboard**
--**Using Dropdowns and Radios in Forms**
--**Join databases**
--**Add pictures of Campers**
--**PWA**
+- **Expand the More features on larger screens**
+- **Create a calendar show current day activities**
+- **Dashboard**
+- **Using Dropdowns and Radios in Forms**
+- **Join databases**
+- **Add pictures of Campers**
+- **PWA**
 
