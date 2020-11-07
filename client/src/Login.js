@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import { Link, withRouter } from "react-router-dom"
-import Nav from "./Nav"
+import NavLogin from "./NavLogin"
 import { authenticate, getUser } from "./helpers"
 import "./Components/Messages/App.css";
 import Footer from "./Components/Global/Footer";
@@ -47,7 +47,7 @@ const Login = (props) => {
 
     return (
         <div>
-            <Nav />
+            <NavLogin />
             <section>
             <h1>LOGIN</h1>
             <br />
