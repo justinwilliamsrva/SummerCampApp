@@ -6,7 +6,7 @@
 </h1>
 
 <h3 align="center">
-	A
+	A stress-free summer camp organizer
 </h3>
 
 <p align="center">
