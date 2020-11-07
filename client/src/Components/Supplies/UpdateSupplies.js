@@ -139,10 +139,11 @@ export default function UpdatePost(props) {
         <div >
             <Nav />
             <section>
-            <br />
+            <div id="app-header">
             <h1>
                 Update <span style={{ color: "blue" }}>{item}</span> Information
             </h1>
+                    </div>
             {showUpdateForm()}
             {getUser() && (
                 <button

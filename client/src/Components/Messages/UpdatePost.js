@@ -100,8 +100,9 @@ export default function UpdatePost(props) {
         <div>
             <Nav />
             <section>
-                <br />
-                <h1>Update Post</h1>
+            <div id="app-header">
+                    <h1>Update Post</h1>
+                    </div>
                 {showUpdateForm()}
             </section>
             <Footer />

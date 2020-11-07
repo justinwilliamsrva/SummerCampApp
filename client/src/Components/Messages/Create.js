@@ -57,7 +57,9 @@ const Create = () => {
         <div>
             <Nav />
             <section>
-            <h1>CREATE A NEW ANNOUNCEMENT</h1>
+            <div id="app-header">
+                    <h1>CREATE A NEW ANNOUNCEMENT</h1>
+                    </div>
             <br />
 
             <form onSubmit={handleSubmit}>

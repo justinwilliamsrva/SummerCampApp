@@ -25,8 +25,9 @@ export default function Supplies() {
         <div>
             <Nav />
             <section>
+            <div id="app-header">
                 <h1>All Campers</h1>
-
+</div>
                 <br />
                 <div className="table-responsive">
                     <table class="table table-striped mt-1">
