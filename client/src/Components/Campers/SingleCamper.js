@@ -54,11 +54,11 @@ const SingleCamper = (props) => {
                         <Link to={`/campers`} className="btn btn-sm btn-outline-primary mr-1">
                             Campers
                         </Link>
-                        <Link
+                        {getUser() && (<Link
                             to={`/camper/update/${camper.slug}`}
                             className="btn btn-sm btn-outline-warning mr-1">
                             Update
-                        </Link>
+                        </Link>)}
                         {getUser() && (
                             <button
                                 onClick={() => deleteConfirm(camper.slug)}
