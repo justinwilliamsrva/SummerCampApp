@@ -70,14 +70,37 @@ const SingleCamper = (props) => {
 
                 <h2>{camper.first_name}  {camper.last_name} - {camper.age} - {camper.gender}</h2>
                 </div>
-                <hr/>
-                <p>Counselor: {camper.counselor} </p>
-                <p>Address: {camper.address} </p>
-                <p>Camper number: {camper.camper_number} </p>
-                <p>Parent names: {camper.parent_names} </p>
-                <p>Parent number: {camper.parent_number} </p>
-                <p>Parent email: {camper.parent_email} </p>
-                <p>Allergies: {camper.allergies} </p>
+                    <hr />
+                    <table>
+                        <tr>
+                            <th>Counselor:</th>
+                            <td>{camper.counselor}</td>
+                        </tr>
+                        <tr>
+                            <th>Address:</th>
+                            <td>{camper.address}</td>
+                        </tr>
+                        <tr>
+                            <th>Camper number:</th>
+                            <td>{camper.camper_number}</td>
+                        </tr>
+                        <tr>
+                            <th>Parent names: </th>
+                            <td>{camper.parent_names}</td>
+                        </tr>
+                        <tr>
+                            <th>Parent number:</th>
+                            <td>{camper.parent_number}</td>
+                        </tr>
+                        <tr>
+                            <th>Parent email: </th>
+                            <td>{camper.parent_email}</td>
+                        </tr>
+                        <tr>
+                            <th>Allergies: </th>
+                            <td>{camper.allergies} </td>
+                        </tr>
+                    </table>
 
 
             </div>
