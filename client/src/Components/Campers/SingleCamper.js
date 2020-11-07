@@ -80,7 +80,7 @@ const SingleCamper = (props) => {
                         <td>{camper.address}</td>
                     </tr>
                     <tr>
-                        <th>Camper number:</th>
+                        <th>Number:</th>
                         <td>{camper.camper_number}</td>
                     </tr>
                     <tr>
