@@ -26,7 +26,8 @@ export default function Supplies() {
             <h1>All Campers</h1>
 
             <br />
-            <table class="table table-striped mt-1 table-responsive ">
+            <div className="table-responsive">
+            <table class="table table-striped mt-1">
                 <thead>
                     <tr>
                         <th scope="col">First</th>
@@ -52,6 +53,7 @@ export default function Supplies() {
 
                 </tbody>
             </table>
+        </div>
         </div>
     );
 }
