@@ -4,18 +4,19 @@
 		alt="Summer camp app"
 		src="./client/public/fire1.png">
 </h1>
+<h1 align="center>Summer Camp Staff App</h1>
 
 <h3 align="center">
 	A stress-free summer camp organizer
 </h3>
 
-<p align="center">
+<h2 align="center">
 	<strong>
-		<a href="https://summercampstaffapp.herokuapp.com/">Website</a>
+		<a target="_blank" href="https://summercampstaffapp.herokuapp.com/">Website</a>
 	</strong>
-</p>
+</h2>
 <p align="center">
-	<a href="https://summercampstaffapp.herokuapp.com/"><img src="./client/public/website.JPG" width="550"></a>
+	<a href="https://summercampstaffapp.herokuapp.com/" target="_blank"><img src="./client/public/website.JPG" width="550"></a>
 </p>
 
 ## Overview
