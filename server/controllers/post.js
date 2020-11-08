@@ -39,8 +39,6 @@ exports.list = (req, res) => {
 exports.read = (req, res) => {
     const { slug } = req.params;
     Post.findOne({ slug })
-        .limit(10)
-        .sort({ createdAt: -1 })
         .exec((err, post) => {
             if (err) console.log(err);
             res.json(post);
