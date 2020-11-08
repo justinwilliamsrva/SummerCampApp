@@ -4,7 +4,7 @@
 		alt="Summer camp app"
 		src="./client/public/fire1.png">
 </h1>
-<h1 align="center>Summer Camp Staff App</h1>
+<h1 align="center">Summer Camp Staff App</h1>
 
 <h3 align="center">
 	A stress-free summer camp organizer
