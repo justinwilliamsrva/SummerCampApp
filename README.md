@@ -15,7 +15,7 @@
 	</strong>
 </p>
 <p align="center">
-	<img src="./client/public/website.JPG" width="550">
+	<a href="https://summercampstaffapp.herokuapp.com/"><img src="./client/public/website.JPG" width="550"></a>
 </p>
 
 ## Overview
