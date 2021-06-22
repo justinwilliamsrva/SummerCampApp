@@ -19,8 +19,13 @@
 }
 
 
+footer ul li img:hover{
+border: 2px aqua dashed;
+background-color: aqua;
+border-radius: 50%;
 
 
+}
 
 
 
